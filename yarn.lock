@@ -1991,9 +1991,9 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@stripe/stripe-js@^1.9.0":
+"@stripe/stripe-js@^1.47.0":
   version "1.47.0"
-  resolved "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-1.47.0.tgz"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.47.0.tgz#48626a2e43302330aa826ce498a2d9761db4053d"
   integrity sha512-jKSClqEIKS2MbPCXlSsseDSZyJ3dVrfUrYMz5LBY1o9iS2tfKbpTZACt8r2g+xyQozI+uHr76pVTyFsmBKA4Mg==
 
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
