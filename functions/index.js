@@ -36,4 +36,4 @@ app.post("/payments/create", async (request, response) => {
 exports.api = functions.https.onRequest(app);
 
 // Example endpoint
-// http://127.0.0.1:5001/spaceymarket/us-central1/api
+// 

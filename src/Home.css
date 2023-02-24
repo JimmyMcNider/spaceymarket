@@ -13,9 +13,27 @@
   margin-right: 5px;
 }
 
+.home__hero {
+  position: relative;
+}
+
 .home__image {
   width: 100%;
   z-index: -1;
   margin-bottom: -150px;
   mask-image: linear-gradient(to top, transparent 10%, black  60%);
+}
+
+.home__heroButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: black;
+  padding: 1em;
 }

@@ -7,6 +7,8 @@ import Checkout from "./Checkout";
 import Login from "./Login";
 import Payment from "./Payment";
 import Orders from "./Orders";
+import Create from "./Create";
+import Footer from "./Footer";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import { loadStripe } from "@stripe/stripe-js";
@@ -46,9 +48,15 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
+          <Route path="/create">
+            <Header />
+            <Create />
+            <Footer />
+          </Route>
           <Route path="/orders">
             <Header />
             <Orders />
+            <Footer />
           </Route>
           <Route path="/login">
             <Login />
@@ -66,6 +74,7 @@ function App() {
           <Route path="/">
             <Header />
             <Home />
+            <Footer />
           </Route>
         </Switch>
       </div>

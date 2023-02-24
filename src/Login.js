@@ -38,7 +38,7 @@ function Login() {
             <Link to='/'>
                 <img
                     className="login__logo"
-                    src={require("./logoblack.png")}
+                    src={require("./logowhite.png")}
                     alt=''
                 />
             </Link>
@@ -57,11 +57,11 @@ function Login() {
                 </form>
 
                 <p>
-                    By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use & Sale. Please
+                    By signing-in you agree to the Raraity, Inc. Conditions of Use & Sale. Please
                     see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
                 </p>
 
-                <button onClick={register} className='login__registerButton'>Create your Amazon Account</button>
+                <button onClick={register} className='login__registerButton'>Create your Raraity Account</button>
             </div>
         </div>
     )

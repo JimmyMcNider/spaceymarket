@@ -1,13 +1,15 @@
-import firebase from "firebase";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBfUe8BKHZ7lgBEnNMJ4ixO9pGhcRjmPEM",
-  authDomain: "spaceymarket.firebaseapp.com",
-  projectId: "spaceymarket",
-  storageBucket: "spaceymarket.appspot.com",
-  messagingSenderId: "513691426053",
-  appId: "1:513691426053:web:f845467c5e19fcb007ab6c",
-  measurementId: "G-5XRCL9RD09"
+  apiKey: "AIzaSyDsaPr1uhmjGi0u5r5D-79qdb2WfdWXASA",
+  authDomain: "raraity-d761c.firebaseapp.com",
+  projectId: "raraity-d761c",
+  storageBucket: "raraity-d761c.appspot.com",
+  messagingSenderId: "537351511819",
+  appId: "1:537351511819:web:057ca70c38a3e872888c0e",
+  measurementId: "G-5WY66QTN0L"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

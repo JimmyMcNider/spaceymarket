@@ -27,13 +27,6 @@ function Product({ id, title, image, price, rating }) {
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        <div className="product__rating">
-          {Array(rating)
-            .fill()
-            .map((_, i) => (
-              <span role='img' description=''><p>🌟</p></span>
-            ))}
-        </div>
       </div>
 
       <img src={image} alt="" />
