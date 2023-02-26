@@ -1,30 +1,39 @@
 import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from "openai";
-import './Create.css'
+import './Create.css';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const configuration = new Configuration({
+  apiKey: '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',
+});
+const openai = new OpenAIApi(configuration);
 
 function Create() {
   const [prompt, setPrompt] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const configuration = new Configuration({
-    organization: "org-bENn3KVLDh8R0i2yw6rrjT77",
-    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
-  });
-  const openai = new OpenAIApi(configuration);
-  const preText = process.env.REACT_APP_RARAITY_PRETEXT;
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const generateImage = async (prompt) => {
+    setIsLoading(true);
     try {
-      const response = await openai.image.create({
+      const response = await openai.createImage({
         prompt: prompt,
         n: 1,
         size: "256x256"
       });
-      setImageUrl(response.data[0].url);
+      setImageUrl(response.data.data[0].url);
+      setIsLoading(false);
     } catch (error) {
       console.error(error);
+      setIsLoading(false);
     }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    await generateImage(prompt);
   }
 
   return (
@@ -38,7 +47,8 @@ function Create() {
           <br/>
           <button className="create__button" type="submit">Generate Art</button>
         </form>
-        {imageUrl && <img src={imageUrl} alt="Generated Image" />}
+        {isLoading && <div>Loading...</div>}
+        {imageUrl && !isLoading && <img src={imageUrl} alt="Generated Image" className='create__image'/>}
       </div>
     </div>
   );
