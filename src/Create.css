@@ -15,15 +15,25 @@
     padding: 10%;
 }
 
-.create__input {
+.create__button-section {
+    margin-inline: 5px;
+    padding-bottom: 5px;
+}
+
+.create__input,
+.create__button-container {
     border: none;
     padding: 5px 5px 5px 5px;
     word-wrap: break-word;
     word-break: break-all;
     border: 2px solid #DDD;
     border-radius: 5px;
-    width: 60vw;
-    margin: 10px 0;
+    width: 70vw;
+    margin: 5px;
+}
+
+h3 {
+    margin: 10px 0 5px 0;
 }
 
 .create__button {
@@ -33,8 +43,21 @@
     border-radius: 5px;
     height: 30px;
     border: 1px solid;
-    margin-top: 10px;
+    margin-top: 5px;
     border-color: black;
+    margin-right: 5px;
+}
+
+.create__button--active {
+    background: White;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 5px;
+    border-color: black;
+    margin-right: 5px;
 }
 
 .create__image {
